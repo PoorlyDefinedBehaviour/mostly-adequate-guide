@@ -1,13 +1,17 @@
 {
   "env": {
     "browser": false,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": ["airbnb-base", "plugin:prettier/recommended"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2019
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
   },
-  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
   "rules": {}
 }
