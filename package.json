@@ -5,14 +5,17 @@
   "license": "MIT",
   "scripts": {
     "build": "node_modules/.bin/sucrase ./src -d ./build --transforms imports",
-    "start": "node_modules/.bin/sucrase-node src/main"
+    "start": "node_modules/.bin/sucrase-node src/main",
+    "test": "node_modules/.bin/jest"
   },
   "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.2.7",
     "prettier": "^2.0.2",
     "sucrase": "^3.13.0"
   }
