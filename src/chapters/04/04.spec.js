@@ -8,7 +8,7 @@ import {
   reduce,
   max,
 } from "."
-import { curry } from "../../std"
+import curry from "../../std/curry"
 
 describe("chapter 04 test suite", () => {
   test("split@ splits string by a separator", () => {

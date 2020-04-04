@@ -1,4 +1,4 @@
-export const curry = fn => {
+const curry = fn => {
   const arity = fn.length
 
   const internalCurry = (...args) =>
@@ -6,3 +6,5 @@ export const curry = fn => {
 
   return internalCurry
 }
+
+export default curry

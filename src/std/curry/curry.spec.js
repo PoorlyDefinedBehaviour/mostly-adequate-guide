@@ -1,4 +1,4 @@
-import { curry } from "."
+import curry from "."
 
 describe("curry function test suite", () => {
   test("can curry a function with arity 2", () => {
@@ -13,5 +13,9 @@ describe("curry function test suite", () => {
     expect(sum(1)(1, 1)).toBe(3)
     expect(sum(1)(1)(1)).toBe(3)
     expect(sum(1, 1)(1)).toBe(3)
+  })
+
+  test("works with functions with arity 0", () => {
+    expect(curry(() => {})()).toBe(undefined)
   })
 })

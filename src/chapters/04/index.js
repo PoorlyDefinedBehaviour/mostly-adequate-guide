@@ -1,4 +1,4 @@
-import { curry } from "../../std"
+import curry from "../../std/curry"
 
 /*
   Refactor to remove all arguments by partially applying the function. 
