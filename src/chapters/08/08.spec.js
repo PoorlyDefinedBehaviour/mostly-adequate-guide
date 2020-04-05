@@ -14,6 +14,7 @@ import {
   eitherWelcome,
   validateUser,
   validateName,
+  capitalize,
 } from "."
 import div from "../../std/div"
 import identity from "../../std/identity"

@@ -1,6 +1,7 @@
 import { Maybe, maybe } from "."
 import mult from "../mult"
 import identiy from "../identity"
+import add from "../add"
 
 describe("maybe test suite", () => {
   test("works with values different than null & undefined", () => {
@@ -30,5 +31,10 @@ describe("maybe test suite", () => {
     expect(maybe("defaultValue")(identiy)(Maybe.of(undefined))).toBe(
       "defaultValue"
     )
+  })
+
+  test("applicative works with any functor", () => {
+    expect(Maybe.of(add(2)).ap(Maybe.of(2)).value).toBe(4)
+    expect(Maybe.of(add).ap(Maybe.of(2)).ap(Maybe.of(2)).value).toBe(4)
   })
 })

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node_modules/.bin/sucrase ./src -d ./build --transforms imports",
     "start": "node_modules/.bin/sucrase-node src/main",
-    "test": "node_modules/.bin/jest"
+    "test": "node_modules/.bin/jest",
+    "test:coverage": "node_modules/.bin/jest --collect-coverage"
   },
   "devDependencies": {
     "@sucrase/jest-plugin": "^2.0.0",
