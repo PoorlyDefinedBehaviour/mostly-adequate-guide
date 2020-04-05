@@ -1,3 +1,4 @@
+// curry :: (*... -> b) -> a -> ... -> c -> b
 const curry = fn => {
   const arity = fn.length
 
